@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: buzzgen:latest   # This will work if built with `minikube image build`
+        image: muthuraj07/buzzgen:latest # This will work if built with `minikube image build`
         ports:
         - containerPort: 5000   # Port inside the container
 ---
