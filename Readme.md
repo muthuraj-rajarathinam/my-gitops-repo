@@ -85,7 +85,7 @@ docker build -t username/buzzgen:latest .
 
 # Log in to Docker Hub
 docker login
-
+docker tag buzzgen:latest username/buzzgen:latest
 # Push the image
 docker push username/buzzgen:latest
 ```
