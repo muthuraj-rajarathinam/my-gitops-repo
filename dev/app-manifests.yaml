@@ -1,1 +1,32 @@
-#app-manifests.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app
+        image: buzzgen:latest   # This will work if built with `minikube image build`
+        ports:
+        - containerPort: 5000   # Port inside the container
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: buzzgen-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80         # Port exposed by service (external)
+      targetPort: 5000   # Port inside the container (matches containerPort above)
