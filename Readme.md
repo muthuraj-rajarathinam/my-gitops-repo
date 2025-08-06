@@ -29,17 +29,16 @@ Ensure you have the following installed and configured:
 
 ## 🚀 Project Setup
 
-### 1️⃣ Clone the Repositories
+### 1️⃣ Create two Repositories And clone it in Local
 
 ```bash
-# Clone your application code
-git clone https://github.com/muthuraj-rajarathinam/my-sample-app.git
-cd my-sample-app
+# Clone your application code & Docker files
+create git repo my-sample-app
 
-# Clone your GitOps repository
-git clone https://github.com/muthuraj-rajarathinam/my-gitops-repo.git
-cd my-gitops-repo
+# clone your deployment.file & service.yaml to single yaml file
+create git  my-gitops-repo
 ```
+Clone it in Local
 
 ---
 
@@ -55,6 +54,12 @@ my-sample-app/
 └── templates/
     └── index.html
 ```
+Ensure your `my-gitops-repo` repository has the correct structure:
+
+```
+my-gitops-repo/
+└── devv/
+    └── app.manifests.yaml
 
 ---
 
@@ -63,14 +68,14 @@ my-sample-app/
 ```bash
 cd my-sample-app
 
-# Build the Docker image (replace 'muthuraj07' with your Docker Hub username)
-docker build -t muthuraj07/buzzgen:latest .
+# Build the Docker image (replace 'Username' with your Docker Hub username)
+docker build -t username/buzzgen:latest .
 
 # Log in to Docker Hub (if not already logged in)
 docker login
 
 # Push the image to Docker Hub
-docker push muthuraj07/buzzgen:latest
+docker push username/buzzgen:latest
 ```
 
 ---
