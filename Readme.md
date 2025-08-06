@@ -225,8 +225,3 @@ helm uninstall argocd --namespace argocd
 
 This project is a **foundational GitOps example** — feel free to fork, enhance, and integrate with other CI/CD tools.
 
----
-
-If you want, I can now also **add shields.io badges** for GitHub, Docker Hub, Kubernetes, and Argo CD at the top so it looks even more polished.
-
-Do you want me to add those badges in the final README?
