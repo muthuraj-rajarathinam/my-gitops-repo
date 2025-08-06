@@ -65,7 +65,7 @@ my-sample-app/
     └── index.html
 ```
 
-**GitOps repo (`my-gitops-repo/`)**:
+**GitOps repo (`my-gitops-repo/`) contains deployment & service yaml file**:
 
 ```
 my-gitops-repo/
