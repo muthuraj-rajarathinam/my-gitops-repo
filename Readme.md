@@ -31,7 +31,7 @@ While Kubernetes orchestrates your containers, it doesn't inherently automate de
 
 **Without Argo CD:**
 
-Deployments would be manual. Every code change would require you to manually build a new Docker image, update your Kubernetes manifest, and then run kubectl apply commands. Any direct manual changes to the cluster (e.g., scaling pods) would persist, leading to "configuration drift" where your live cluster no longer matches your Git repository.
+Deployments would be manual. Every code change would require you to manually build a new Docker image, update your Kubernetes manifest, and then run``` kubectl``` apply commands. Any direct manual changes to the cluster (e.g., scaling pods) would persist, leading to "configuration drift" where your live cluster no longer matches your Git repository.
 
 **With Argo CD:**
 
